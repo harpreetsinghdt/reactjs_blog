@@ -1,11 +1,13 @@
-const names = ["Harry", "Harpreet"];
-const Post = () => {
-  const randName = Math.random() > 0.5 ? names[0] : names[1];
+import cls from "./Post.module.css";
+
+// const names = ["Harry", "Harpreet"];
+const Post = (props) => {
+  // const randName = Math.random() > 0.5 ? names[0] : names[1];
   return (
-    <div>
-      <p>{randName}</p>
-      <p>Desc is here</p>
-    </div>
+    <li className={cls.post}>
+      <p className={cls.author}>{props.author}</p>
+      <p className={cls.text}>{props.body}</p>
+    </li>
   );
 };
 
